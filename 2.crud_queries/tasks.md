@@ -39,7 +39,7 @@ db.articles.update({title : "react"} ,{$set: {name : "Yash"}})
 ```
 10. rename details field to description from articles collection. 
 ```
-
+.
 
 11. Add additional tag in a specific document.
 
