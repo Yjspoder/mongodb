@@ -1,45 +1,22 @@
 1. Create a database named `blog`.
-```
-use blog
-```
+
 2. Create a collection called 'articles'.
-```
-db.createCollection("articles")
-```
+
 3. Insert multiple documents(at least 3) into articles. It should have fields
-```
-db.articles.insertMany([{name : 'Yash' , title : "mongodb" , tags:["javascript" , "backend" , "mongodb" , "nodejs"]} , {name : 'Swastik' , title : "express" , tags:["javascript" , "backend" , "express" , "nodejs"]} , {name : 'Prateek' , title : "carryminati" , tags :["youtube" , "entertainment" , "video]}])
+
 4. Find all the articles using `db.COLLECTION_NAME.find()`
-```
-db.articles.find()
-```
 
 5. Find a document using _id field.
-```
-db.articles.find({ "_id" : ObjectId("5d5abb62ab33a3c583434ff3")})
-```
-6. Find documents using title and author's name field.
-```
-db.articles.find({name : "Swastik" , title : "express"})
-```
-7. Find document using a specific tag.
-```
 
-db.articles.find({"tags" :{$all:['youtube']}})
-```
+6. Find documents using title and author's name field.
+
+7. Find document using a specific tag.
 
 8. Update title of a document using its _id field.
-```
-
-> db.articles.update({ "_id" : ObjectId("5d5abb62ab33a3c583434ff4")} ,{$set: {"title" : "react"}})
 
 9. Update a author's name using article's title.
-```
-db.articles.update({title : "react"} ,{$set: {name : "Yash"}})
-```
-10. rename details field to description from articles collection. 
-```
 
+10. rename details field to description from articles collection. 
 
 11. Add additional tag in a specific document.
 
